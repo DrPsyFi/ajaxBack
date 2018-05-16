@@ -1,0 +1,16 @@
+{
+  "blogs": [{
+    "id": 1,
+    "title": "Who do you love?",
+    "content": "Carrie, Meera, Mom"
+  }, {
+    "id": 2,
+    "title": "What is you favorite color?",
+    "content": "Purple"
+  }, {
+    "id": 3,
+    "title": "What is your favorite band?",
+    "content": "Queens of the StoneAge"
+
+  }]
+}

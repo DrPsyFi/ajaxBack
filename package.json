@@ -1,0 +1,24 @@
+{
+  "name": "js-assessment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ajaxBack/app.js & live-server ajaxFront"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "live-server": "^1.2.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "mecha-js": "^0.1.4",
+    "morgan": "^1.9.0",
+    "uuid": "^3.1.0"
+  }
+}
