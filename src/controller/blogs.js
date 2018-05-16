@@ -6,9 +6,9 @@ const getAllBlogs = (req, res, next) => {
   res.status(200).json({ data: blogs });
 };
 
-const getBlogsById = (req, res, next) => {
+const getBlogsId = (req, res, next) => {
   const id = req.params.id;
-  const blogs = model.getBlogsById(id);
+  const blogs = model.getBlogsId(id);
   if (blogs) return res.status(200).json({ data: blogs });
   next({ status: 404, message: `Blogs ${id} not found` });
 }
@@ -30,18 +30,17 @@ const updateBlogs = (req, res, next) => {
   const content = req.body.content
 
   if(!id || !title || !content) {
-    return next ({ status: 400, message: "You need to submit the following info to update : id, title, content
-"})
+    return next ({ status: 400, message: "You need to submit the following info to update : id, title, content"})
   }
   else {
-    const updatedBlog = model.updateBlog(id, title, content)
-    res.status(200).json({data: updateBlog})
+    const updatedBlog = model.updateBlogs(id, title, content)
+    res.status(200).json({data: updatedBlog})
   }
 }
 
-const deleteBlog = (req, res, next) => {
+const deleteBlogs = (req, res, next) => {
   const id = req.params.id
-  const deletedBlog = model.deleteBlog(id)
+  const deletedBlog = model.deleteBlogs(id)
 
   if(!id) {({status: 404, message: `Blog ${id} was not found.`})
     return next
@@ -52,8 +51,8 @@ const deleteBlog = (req, res, next) => {
 }
 module.exports = {
   getAllBlogs,
-  getBlogsById,
+  getBlogsId,
   createBlogs,
   updateBlogs,
-  deleteBlogs
+  deleteBlogs,
 };

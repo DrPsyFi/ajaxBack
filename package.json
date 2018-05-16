@@ -1,7 +1,7 @@
 {
-  "name": "js-assessment",
+  "name": "ajaxBack",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon ajaxBack/app.js & live-server ajaxFront"
