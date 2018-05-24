@@ -15,6 +15,7 @@ const getBlogsId = (req, res, next) => {
 
 const createBlogs = (req, res, next) => {
   const { title, content } = req.body
+  
   if (!title || !content) {
     return next ({ status: 400, message: "You need to provide a title and content to create a post."})
   }
